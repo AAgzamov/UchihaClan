@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap"); /* Acme, sans-serif */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'") /* "Ubuntu Condensed", sans-serif */;
+
+@keyframes quoteAppear {
+  from {opacity: 0;} to {opacity: 1;}
+}
+
+@keyframes quoteDisappear {
+  from {opacity: 1;} to {opacity: 0;}
+}
+
+@keyframes nonQuoteAppear {
+  from {opacity: 0;} to {opacity: 1;}
+}
+
+@keyframes headerAppear {
+  from {
+    opacity: 0;
+    font-size: 2vh;
+  }
+  to {
+    opacity: 1;
+    font-size: 5vh;
+  }
+}
+
+@keyframes navAppear {
+  from {
+    opacity: 0;
+    margin-left: 100%;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0%;
+  }
+}
+
+@keyframes mainAppear {
+  from {
+    opacity: 0;
+    height: 0vh;
+  }
+  to {
+    opacity: 1;
+    height: 80vh;
+  }
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+body{
+  margin: 0px;
+  background-color: black;
+  color: white;
+}
+
+header{
+  /* display: flex; */
+  display: none;
+  border: 2px solid blue;
+  align-items: center;
+  justify-content: center;
+  font-family: Acme, sans-serif;
+  font-size: 2vh;
+
+}
+
+header *{
+  border: 2px solid red;
+  width: 12vw;
+  margin: 0px 3vw;
+  text-align: center;
+}
+
+nav{
+  /* display: flex; */
+  display: none;
+  border: 2px solid green;
+  height: 60vh;
+  overflow-x: scroll;
+  margin-left: 100%;
+}
+
+nav img{
+  transition: .9s;
+  filter: grayscale();
+  transform: skewX(20deg);
+  margin: 0px 3vw;
+}
+
+nav img:hover{
+  transition: .9s;
+  filter: none;
+}
+
+main{
+  /* display: flex; */
+  display: none;
+  border: 2px solid yellow;
+  height: 0vh;
+  padding: 20vh 4vw;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+footer{
+  /* display: flex; */
+  display: none;
+  border: 2px solid purple;
+  height: 35vh;
+  padding: 20vh 4vw;
+}
+
+#footer__title{
+  font-family: Acme, sans-serif;
+  font-size: 4vh;
+}
+
+.contacts{
+  border: 2px solid red;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+
+
+.quote{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  /* border: 2px solid white; */
+  background-color: black;
+
+  animation-name: quoteDisappear;
+  animation-delay: 15s;
+  animation-fill-mode: forwards;
+  animation-duration: 10s;
+}
+
+.quote span{
+  color: #575656; /* grey */
+  text-decoration: underline;
+  text-decoration-color: #ff0000;
+
+}
+.quote__text{
+  font-family: Acme, sans-serif;
+  font-size: 5vh;
+  /* border: 2px solid yellow; */
+  text-align: center;
+  margin-bottom: 2%;
+  opacity: 0;
+
+  animation-name: quoteAppear;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+
+.quote__author{
+  color: #ff0000; /* red */
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 4vh;
+  text-align: right;
+  /* border: 2px solid blue; */
+  padding-right: 5%;
+  opacity: 0;
+
+  animation-name: quoteAppear;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
