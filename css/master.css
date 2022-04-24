@@ -146,7 +146,7 @@ footer{
 .quote span{
   color: #575656; /* grey */
   text-decoration: underline;
-  text-decoration-color: #ff0000;
+  text-decoration-color: #ff0000; /* red */
 
 }
 .quote__text{
