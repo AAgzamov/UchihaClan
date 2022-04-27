@@ -50,6 +50,11 @@
   display: none;
 }
 
+::selection{
+  color: red;
+  background-color: white;
+}
+
 body{
   margin: 0px;
   background-color: black;
@@ -106,6 +111,7 @@ main{
 
 footer{
   /* display: flex; */
+  flex-direction: column;
   display: none;
   border: 2px solid purple;
   height: 35vh;
@@ -122,6 +128,10 @@ footer{
   font-family: "Ubuntu Condensed", sans-serif;
 }
 
+.links img{
+  width: 20vw;
+  height: 20vh;
+}
 
 
 .quote{
@@ -174,4 +184,13 @@ footer{
   animation-name: quoteAppear;
   animation-duration: 10s;
   animation-fill-mode: forwards;
+}
+
+.hint{
+  display: none;
+  background-color: grey;
+  width: 50vw;
+  height: 50vh;
+  border: black 1px solid;
+  border-radius: 10vh;
 }
