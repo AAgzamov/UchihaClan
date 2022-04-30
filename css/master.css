@@ -102,7 +102,6 @@ nav img{
 }
 
 nav img:hover{
-  transition: filter .9s;
   filter: none;
   cursor: pointer;
 }
