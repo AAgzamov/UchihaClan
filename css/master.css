@@ -82,22 +82,29 @@ header *{
 nav{
   /* display: flex; */
   display: none;
-  border: 2px solid green;
-  height: 60vh;
-  overflow-x: scroll;
+  /* border: 2px solid green; */
+  height: 100vh;
+  /* overflow-x: scroll; */
   margin-left: 100%;
+  margin-top: 18vh;
+  margin-bottom: 10vh;
 }
 
 nav img{
-  transition: .9s;
+  transition: .9s !important;
   filter: grayscale();
-  transform: skewX(20deg);
-  margin: 0px 3vw;
+  /* transform: skewX(20deg) !important; */
+  /* margin: 0px 3vw; */
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 40vw !important;
+  height: 100vh !important;
 }
 
 nav img:hover{
-  transition: .9s;
+  transition: filter .9s;
   filter: none;
+  cursor: pointer;
 }
 
 main{
@@ -193,4 +200,13 @@ footer{
   height: 50vh;
   border: black 1px solid;
   border-radius: 10vh;
+}
+
+.swiper-pagination-bullet{
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 3px solid red;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: red !important;
 }

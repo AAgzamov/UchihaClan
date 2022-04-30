@@ -3,6 +3,7 @@ const navDiv = document.querySelector("nav")
 const mainDiv = document.querySelector("main")
 const footerDiv = document.querySelector("footer")
 const quoteDiv = document.querySelector(".quote")
+const images = document.querySelectorAll("img")
 
 setTimeout( () => {
   headerDiv.style.display = "flex"
@@ -30,6 +31,12 @@ setTimeout( () => {
 setTimeout( () => {
   quoteDiv.style.display = "none"
 }, 25000)
+
+images.forEach((item, i) => {
+  item.addEventListener("dragstart", (event) => {
+    event.preventDefault()
+  })
+});
 
 // quoteDiv.addEventListener("animationstart", () => {
 //   headerDiv.style.display = "flex"

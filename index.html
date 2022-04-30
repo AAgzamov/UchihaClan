@@ -5,6 +5,10 @@
     <title>Home || Uchiha</title>
     <link rel="stylesheet" href="./css/master.css">
     <link rel="icon" href="./pictures/mainPage/icon.png">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
   </head>
   <body>
     <header>
@@ -22,17 +26,19 @@
           Tab 4
         </div>
     </header>
-    <nav>
-      <img src="./pictures/mainPage/0.jpg" alt="">
-      <img src="./pictures/mainPage/1.jpg" alt="">
-      <img src="./pictures/mainPage/2.jpg" alt="">
-      <img src="./pictures/mainPage/3.png" alt="">
-      <img src="./pictures/mainPage/4.jpg" alt="">
-      <img src="./pictures/mainPage/5.jpg" alt="">
-      <img src="./pictures/mainPage/6.jpg" alt="">
-      <img src="./pictures/mainPage/7.jpg" alt="">
-      <img src="./pictures/mainPage/8.jpg" alt="">
-
+    <nav class="swiper">
+      <div class="swiper-wrapper">
+      <img class="swiper-slide" src="./pictures/mainPage/0.jpg" alt="">
+      <img class="swiper-slide" src="./pictures/mainPage/1.jpg" alt="">
+      <img class="swiper-slide" src="./pictures/mainPage/2.jpg" alt="">
+      <img class="swiper-slide" src="./pictures/mainPage/3.png" alt="">
+      <img class="swiper-slide" src="./pictures/mainPage/4.jpg" alt="">
+      <img class="swiper-slide" src="./pictures/mainPage/5.jpg" alt="">
+      <img class="swiper-slide" src="./pictures/mainPage/6.jpg" alt="">
+      <img class="swiper-slide" src="./pictures/mainPage/7.jpg" alt="">
+      <img class="swiper-slide" src="./pictures/mainPage/8.jpg" alt="">
+      </div>
+      <div class="swiper-pagination"></div>
     </nav>
     <main>
       <div class="text__container">
@@ -49,7 +55,7 @@
     </main>
     <footer>
       <div class="contacts">
-        <span id="footer__title">Contact Creators:</span>
+        <span id="footer__title">Contact Developers:</span>
         <br><br><br>
         Amirkhon Agzamov aka AAgzamov
         <br>
@@ -79,6 +85,29 @@
       Press Shift + M for the magic to happen...
     </div>
     <script type="text/javascript" src="./js/script.js">
+    </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript">
+      const swiper = new Swiper(".swiper", {
+        direction: "horizontal",
+        loop: true,
+        centeredSlides: true,
+        speed: 100,
+        // centerInsufficientSlides: true,
+        // centeredSlidesBounds: true,
+        slidesPerView: "auto",
+        // spaceBetween: 50,
+        effect: "coverflow",
+        coverflowEffect: {
+          depth: 700,
+          rotate: 20,
+          stretch: 0,
+          slideShadows: true
+        },
+        pagination: {
+          el: ".swiper-pagination"
+        }
+      })
     </script>
   </body>
 </html>
