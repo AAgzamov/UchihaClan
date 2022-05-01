@@ -83,6 +83,7 @@ header *{
 header div{
   width: auto;
   transition: .9s;
+  -webkit-text-stroke: 1px white;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   color: black;
 }
@@ -90,6 +91,7 @@ header div:hover{
   transition: .9s;
   color: white;
   transform: scale(1.3, 1);
+  -webkit-text-stroke: 1px red;
   text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
 }
 
