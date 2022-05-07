@@ -3,17 +3,17 @@
 
 @font-face {
   font-family: "YouMurderer";
-  src: url("../.fonts/Youmurdererbb-pwoK.otf");
+  src: url("../fonts/Youmurdererbb-pwoK.otf");
 }
 
 @font-face {
   font-family: "Black Asylum";
-  src: url("../.fonts/BlackAsylum-xypj.ttf");
+  src: url("../fonts/BlackAsylum-xypj.ttf");
 }
 
 @font-face {
   font-family: Bloody;
-  src: url(../.fonts/Bloody-z0V3.ttf);
+  src: url(../fonts/Bloody-z0V3.ttf);
 }
 
 @keyframes quoteAppear {
