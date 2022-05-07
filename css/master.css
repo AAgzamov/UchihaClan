@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap"); /* Acme, sans-serif */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'") /* "Ubuntu Condensed", sans-serif */;
 
+@font-face {
+  font-family: "YouMurderer";
+  src: url("../.fonts/Youmurdererbb-pwoK.otf");
+}
+
+@font-face {
+  font-family: "Black Asylum";
+  src: url("../.fonts/BlackAsylum-xypj.ttf");
+}
+
+@font-face {
+  font-family: Bloody;
+  src: url(../.fonts/Bloody-z0V3.ttf);
+}
+
 @keyframes quoteAppear {
   from {opacity: 0;} to {opacity: 1;}
 }
@@ -24,6 +39,18 @@
   }
 }
 
+@keyframes divClanAppear {
+  from{
+    opacity: 0;
+    height: 0vh;
+    color: black;
+  }
+  to{
+    opacity: 1;
+    height: 12vh;
+    color: white;
+  }
+}
 @keyframes navAppear {
   from {
     opacity: 0;
@@ -94,6 +121,24 @@ header div:hover{
   -webkit-text-stroke: 1px red;
   text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
 }
+
+div.clan__name{
+  display: none;
+  height: 0vh;
+  opacity: 0;
+  color: black;
+  /* font-family: Acme, sans-serif; */
+  font-family: "Black Asylum", sans-serif;
+  font-size: 10vh;
+  border: 2px solid green;
+  justify-content: center;
+  align-items: center;
+  transition: .9s;
+
+  overflow-y: hidden;
+
+}
+
 
 nav{
   /* display: flex; */
@@ -206,6 +251,36 @@ footer{
   animation-name: quoteAppear;
   animation-duration: 10s;
   animation-fill-mode: forwards;
+}
+
+.play__button{
+  font-family: Acme, sans-serif;
+  font-size: 5vh;
+  text-align: center;
+  transform: translateY(20vh);
+  /* border: 2px solid yellow; */
+
+  animation-name: quoteAppear;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+}
+#playButton{
+  border: 0.3vw solid white;
+  border-radius: 2vw;
+  box-sizing: border-box;
+  padding: 0.5vh;
+  text-decoration: none;
+  color: black;
+  -webkit-text-stroke: 1px white;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+}
+
+#playButton:hover{
+  color: white;
+  border-color: red;
+  -webkit-text-stroke: 1px red;
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
 }
 
 .hint{
