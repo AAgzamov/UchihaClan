@@ -167,13 +167,43 @@ nav img:hover{
   cursor: url("../pictures/cursorHover.png"), auto;
 }
 
-main{
+/*main{
   /* display: flex; */
   display: none;
   border: 2px solid yellow;
   height: 0vh;
   padding: 20vh 4vw;
-  font-family: "Ubuntu Condensed", sans-serif;
+  /*font-family: "Ubuntu Condensed", sans-serif;*/
+/*}*/
+
+.main {
+
+}
+
+.main__container {
+	max-width: 1200px;
+	margin: 0px auto;
+}
+
+.main__text {
+	font-family: Acme, sans-serif;
+}
+
+.text-main__general {
+	font-size: 18px;
+}
+
+.text-main__abilities {
+
+}
+
+.text-main__abilities p:last-child {
+	display: flex;
+	align-items: center;
+}
+
+.text-main__abilities p:last-child img {
+	order: 1;
 }
 
 .footer {
@@ -213,24 +243,6 @@ main{
 
 .footer__logo span {
 	font-family: "Black Asylum", sans-serif;
-}
-
-.footer__menu {
-	text-align: center;
-	margin: 0px 0px 30px 0px;
-}
-
-.footer__list {
-	list-style-type: none;
-}
-
-.footer__link {
-	color: #000;
-	-webkit-text-stroke: 1px white;
-	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-	text-decoration: none;
-	margin: 0px 0px 0px 10px;
-	font-size: 25px;
 }
 
 .footer__contacts {
