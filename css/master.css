@@ -65,11 +65,22 @@
 @keyframes mainAppear {
   from {
     opacity: 0;
+    width: 0vw;
+  }
+  to {
+    opacity: 1;
+    width: 100vw;
+  }
+}
+
+@keyframes footerAppear {
+  from {
+    opacity: 0;
     height: 0vh;
   }
   to {
     opacity: 1;
-    height: 80vh;
+    height: 40vh;
   }
 }
 
@@ -92,7 +103,7 @@ body{
 header{
   /* display: flex; */
   display: none;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   align-items: center;
   justify-content: center;
   font-family: Acme, sans-serif;
@@ -101,7 +112,7 @@ header{
 }
 
 header *{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 12vw;
   margin: 0px 3vw;
   text-align: center;
@@ -130,7 +141,7 @@ div.clan__name{
   /* font-family: Acme, sans-serif; */
   font-family: "Black Asylum", sans-serif;
   font-size: 10vh;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   justify-content: center;
   align-items: center;
   transition: .9s;
@@ -156,7 +167,7 @@ nav img{
   filter: grayscale();
   /* transform: skewX(20deg) !important; */
   /* margin: 0px 3vw; */
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   border-radius: 20px;
   width: 40vw !important;
   height: 100vh !important;
@@ -167,17 +178,39 @@ nav img:hover{
   cursor: url("../pictures/cursorHover.png"), auto;
 }
 
-/*main{
-  /* display: flex; */
+/* main{
+  display: flex;
   display: none;
   border: 2px solid yellow;
   height: 0vh;
   padding: 20vh 4vw;
-  /*font-family: "Ubuntu Condensed", sans-serif;*/
-/*}*/
+  font-family: "Ubuntu Condensed", sans-serif;
+} */
 
-.main {
+main * {
+  transition: 0.7s;
+}
+main {
+  display: none;
+  opacity: 0;
+  width: 0vw;
+  overflow: hidden;
+}
 
+main h1{
+  /* border: 2px solid blue; */
+  display: inline-block;
+  font-size: 7vh;
+  color: black;
+  -webkit-text-stroke: 1px white;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+main h1:hover{
+  color: white;
+  -webkit-text-stroke: 1px red;
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+  transform: translateX(20px);
 }
 
 .main__container {
@@ -190,11 +223,13 @@ nav img:hover{
 }
 
 .text-main__general {
-	font-size: 18px;
+  font-family: "Ubuntu Condensed", sans-serif;
+	font-size: 4vh;
 }
 
-.text-main__abilities {
-
+.text-main__abilities p{
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 4vh;
 }
 
 .text-main__abilities p:last-child {
@@ -206,8 +241,12 @@ nav img:hover{
 	order: 1;
 }
 
-.footer {
-	padding: 10px;
+footer {
+  display: none;
+  padding: 10px;
+  opacity: 0;
+  height: 0vh;
+  overflow: hidden;
 }
 
 .footer__content {
@@ -293,11 +332,6 @@ nav img:hover{
 	height: 100px;
 	border-radius: 50%;
 	border: 3px solid rgba(153, 61, 61, 0.9);
-}
-
-.links img{
-  width: 20vw;
-  height: 20vh;
 }
 
 

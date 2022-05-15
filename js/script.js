@@ -17,10 +17,6 @@ playButtonDiv.addEventListener("click", () => {
   }
 })
 
-// backgroundMusic.addEventListener("ended", () => {
-//   backgroundMusic.play()
-// })
-
 setTimeout( () => {
   headerDiv.style.display = "flex"
   headerDiv.style.animationName = "headerAppear"
@@ -43,7 +39,8 @@ setTimeout( () => {
   mainDiv.style.animationFillMode = "forwards"
 
   footerDiv.style.display = "flex"
-  footerDiv.style.animationName = "nonQuoteAppear"
+  // footerDiv.style.animationName = "nonQuoteAppear"
+  footerDiv.style.animationName = "footerAppear"
   footerDiv.style.animationDuration = "10s"
   footerDiv.style.animationFillMode = "forwards"
 
@@ -58,6 +55,16 @@ images.forEach((item, i) => {
     event.preventDefault()
   })
 });
+
+// document.addEventListener("keydown", (key) => {
+//   if (key.key === "F12"){
+//     event.preventDefault()
+//   }
+// })
+
+document.addEventListener("contextmenu", () => {
+  event.preventDefault()
+})
 
 // quoteDiv.addEventListener("animationstart", () => {
 //   headerDiv.style.display = "flex"
