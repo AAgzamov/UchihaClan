@@ -1,3 +1,6 @@
+// Load page only when everything is loaded.
+window.addEventListener("load", () => {
+
 const headerDiv = document.querySelector("header")
 const clanDiv = document.querySelector(".clan__name")
 const navDiv = document.querySelector("nav")
@@ -73,3 +76,5 @@ document.addEventListener("contextmenu", () => {
 //   footerDiv.style.display = "flex"
 //   quoteDiv.style.display = "none"
 // })
+
+})
