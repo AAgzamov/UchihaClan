@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
 const headerDiv = document.querySelector("header")
 const clanDiv = document.querySelector(".clan__name")
 const navDiv = document.querySelector("nav")
+const lifeLessonDiv = document.querySelector(".life__lesson")
 const mainDiv = document.querySelector("main")
 const footerDiv = document.querySelector("footer")
 const quoteDiv = document.querySelector(".quote")
@@ -36,6 +37,11 @@ setTimeout( () => {
   navDiv.style.animationDuration = "10s"
   navDiv.style.animationFillMode = "forwards"
 
+  lifeLessonDiv.style.display = "block"
+  lifeLessonDiv.style.animationName = "mainAppear"
+  lifeLessonDiv.style.animationDuration = "10s"
+  lifeLessonDiv.style.animationFillMode = "forwards"
+  
   mainDiv.style.display = "flex"
   mainDiv.style.animationName = "mainAppear"
   mainDiv.style.animationDuration = "10s"
@@ -59,22 +65,8 @@ images.forEach((item, i) => {
   })
 });
 
-// document.addEventListener("keydown", (key) => {
-//   if (key.key === "F12"){
-//     event.preventDefault()
-//   }
-// })
-
 document.addEventListener("contextmenu", () => {
   event.preventDefault()
 })
-
-// quoteDiv.addEventListener("animationstart", () => {
-//   headerDiv.style.display = "flex"
-//   navDiv.style.display = "flex"
-//   mainDiv.style.display = "flex"
-//   footerDiv.style.display = "flex"
-//   quoteDiv.style.display = "none"
-// })
 
 })

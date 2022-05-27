@@ -32,18 +32,67 @@
 	</div>
 	<nav class="swiper">
 	  <div class="swiper-wrapper">
-	  <img class="swiper-slide" src="./pictures/mainPage/0.jpg" alt="">
-	  <img class="swiper-slide" src="./pictures/mainPage/1.jpg" alt="">
-	  <img class="swiper-slide" src="./pictures/mainPage/2.jpg" alt="">
-	  <img class="swiper-slide" src="./pictures/mainPage/3.png" alt="">
-	  <img class="swiper-slide" src="./pictures/mainPage/4.jpg" alt="">
-	  <img class="swiper-slide" src="./pictures/mainPage/5.jpg" alt="">
-	  <img class="swiper-slide" src="./pictures/mainPage/6.jpg" alt="">
-	  <img class="swiper-slide" src="./pictures/mainPage/7.jpg" alt="">
-	  <img class="swiper-slide" src="./pictures/mainPage/8.jpg" alt="">
+      <div class="swiper-slide">
+        <img src="./pictures/mainPage/0.jpg" alt="">
+        <div class="uchiha__name">
+          Madara Uchiha
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img class="swiper-slide" src="./pictures/mainPage/1.jpg" alt="">
+        <div class="uchiha__name">
+          Izuna Uchiha
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img class="swiper-slide" src="./pictures/mainPage/2.jpg" alt="">
+        <div class="uchiha__name">
+          Kagami Uchiha
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img class="swiper-slide" src="./pictures/mainPage/3.png" alt="">
+        <div class="uchiha__name">
+          Fugaku Uchiha
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img class="swiper-slide" src="./pictures/mainPage/4.jpg" alt="">
+        <div class="uchiha__name">
+          Obito Uchiha
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img class="swiper-slide" src="./pictures/mainPage/5.jpg" alt="">
+        <div class="uchiha__name">
+          Shisui Uchiha
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img class="swiper-slide" src="./pictures/mainPage/6.jpg" alt="">
+        <div class="uchiha__name">
+          Itachi Uchiha
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img class="swiper-slide" src="./pictures/mainPage/7.jpg" alt="">
+        <div class="uchiha__name">
+          Sasuke Uchiha
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img class="swiper-slide" src="./pictures/mainPage/8.jpg" alt="">
+        <div class="uchiha__name">
+          Sarada Uchiha
+        </div>
+      </div>
+
 	  </div>
 	  <div class="swiper-pagination"></div>
 	</nav>
+  <div class="life__lesson">
+    The concept of hope is nothing more than giving up. A word that holds no true meaning.
+  </div>
 	<main class="main">
 		<div class="main__container">
 			<div class="main__text text-main">
@@ -116,6 +165,8 @@
 	</script>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script type="text/javascript">
+    const bodyDiv = document.querySelector("body")
+    const lifeLessonDiv = document.querySelector(".life__lesson")
 	  const swiper = new Swiper(".swiper", {
 		direction: "horizontal",
 		loop: true,
@@ -127,7 +178,7 @@
 		// spaceBetween: 50,
 		effect: "coverflow",
 		coverflowEffect: {
-		  depth: 700,
+		  depth: 400,
 		  rotate: 20,
 		  stretch: 0,
 		  slideShadows: true
@@ -136,6 +187,35 @@
 		  el: ".swiper-pagination"
 		}
 	  })
+    bodyDiv.addEventListener("mousemove", () => {
+      if (swiper.realIndex === 0){
+        lifeLessonDiv.innerText = "The concept of hope is nothing more than giving up. A word that holds no true meaning"
+      }
+      else if (swiper.realIndex === 1){
+        lifeLessonDiv.innerText = "People cannot show each other their true feelings. Fear, suspicion, and resentment never subside"
+      }
+      else if (swiper.realIndex === 2){
+        lifeLessonDiv.innerText = "Man seeks peace, yet at the same time yearning for war... Those are the two realms belonging solely to man"
+      }
+      else if (swiper.realIndex === 3){
+        lifeLessonDiv.innerText = "It’s foolish to fear what we have yet to see and know"
+      }
+      else if (swiper.realIndex === 4){
+        lifeLessonDiv.innerText = "When a man learns to love, he must bear the risk of hatred"
+      }
+      else if (swiper.realIndex === 5){
+        lifeLessonDiv.innerText = "I don't even know if there is such a thing as justice in the world. We fight believing in our own justice. But if the enemy is doing the same thing, who's right?"
+      }
+      else if (swiper.realIndex === 6){
+        lifeLessonDiv.innerText = "Knowledge and awareness are vague, and perhaps better called illusions. Everyone lives within their own subjective interpretation"
+      }
+      else if (swiper.realIndex === 7){
+        lifeLessonDiv.innerText = "The people that are the hardest to love are usually the ones who need it the most"
+      }
+      else if (swiper.realIndex === 8){
+        lifeLessonDiv.innerText = "Don’t be afraid of losing other people, be afraid of losing yourself"
+      }
+    })
 	</script>
   </body>
 

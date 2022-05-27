@@ -155,11 +155,11 @@ nav{
   /* display: flex; */
   display: none;
   /* border: 2px solid green; */
-  height: 100vh;
+  height: 85vh;
   /* overflow-x: scroll; */
   margin-left: 100%;
-  margin-top: 18vh;
-  margin-bottom: 10vh;
+  margin-top: 26vh;
+  margin-bottom: 4vh;
 }
 
 nav img{
@@ -169,8 +169,8 @@ nav img{
   /* margin: 0px 3vw; */
   /* border: 1px solid transparent; */
   border-radius: 20px;
-  width: 40vw !important;
-  height: 100vh !important;
+  width: 30vw !important;
+  height: 70vh !important;
 }
 
 nav img:hover{
@@ -426,6 +426,23 @@ footer {
   border-radius: 10vh;
 }
 
+div.swiper-slide{
+  width: 30vw;
+
+}
+
+div.swiper-slide div{
+  width: 30vw;
+  text-align: center;
+  font-family: Bloody, sans-serif;
+  font-size: 7vh;
+}
+div.swiper-slide:hover > div{
+  color: rgba(212, 14, 0, 1); /* red */
+  -webkit-text-stroke: 1px white;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  transition: 1s;
+}
 .swiper-pagination-bullet{
   background-color: rgba(255, 255, 255, 0.9) !important;
   border: 3px solid red;
@@ -433,4 +450,18 @@ footer {
 
 .swiper-pagination-bullet-active{
   background-color: red !important;
+}
+
+div.life__lesson{
+  text-align: center;
+  font-size:  5vh;
+  font-family: Acme, sans-serif;
+  height: 8vh;
+  margin-bottom: 40vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  box-sizing: border-box;
+  opacity: 0;
+  width: 0;
+  display: none;
 }
