@@ -1,4 +1,4 @@
-# UchihaClan
+# Uchiha Clan
 Demonstration of the Uchiha, of those, who truly experience the love and hatred...
 <br>
 [Webpage](https://aagzamov.github.io/UchihaClan/)
