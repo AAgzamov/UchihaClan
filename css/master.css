@@ -154,7 +154,7 @@ div.clan__name{
   /* font-family: Acme, sans-serif; */
   font-family: "Black Asylum", sans-serif;
   font-size: 10vh;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   justify-content: center;
   align-items: center;
   transition: .9s;
