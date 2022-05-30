@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap"); /* Acme, sans-serif */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'") /* "Ubuntu Condensed", sans-serif */;
 
+* {
+    scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "YouMurderer";
   src: url("../fonts/Youmurdererbb-pwoK.otf");
@@ -113,19 +117,19 @@ header{
 
 header *{
   /* border: 2px solid red; */
-  width: 12vw;
-  margin: 0px 3vw;
+  /* width: 14vw; */
   text-align: center;
 }
 
-header div{
+header div.tab{
   width: auto;
+  margin: 0px 5vw;
   transition: .9s;
   -webkit-text-stroke: 1px white;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   color: black;
 }
-header div:hover{
+header div.tab:hover{
   transition: .9s;
   color: white;
   transform: scale(1.3, 1);
@@ -133,6 +137,15 @@ header div:hover{
   text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
 }
 
+header div a{
+  overflow-wrap: break-word;
+  text-decoration: none;
+  color: inherit;
+}
+
+header div a:hover{
+  cursor: inherit;
+}
 div.clan__name{
   display: none;
   height: 0vh;
@@ -141,7 +154,7 @@ div.clan__name{
   /* font-family: Acme, sans-serif; */
   font-family: "Black Asylum", sans-serif;
   font-size: 10vh;
-  /* border: 2px solid green; */
+  border: 2px solid green;
   justify-content: center;
   align-items: center;
   transition: .9s;
@@ -227,17 +240,17 @@ main h1:hover{
 	font-size: 4vh;
 }
 
-.text-main__abilities p{
+.text-main__title p{
   font-family: "Ubuntu Condensed", sans-serif;
   font-size: 4vh;
 }
 
-.text-main__abilities p:last-child {
+.text-main__title p:last-child {
 	display: flex;
 	align-items: center;
 }
 
-.text-main__abilities p:last-child img {
+.text-main__title p:last-child img {
 	order: 1;
 }
 
