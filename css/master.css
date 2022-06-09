@@ -199,6 +199,7 @@ nav img:hover{
   padding: 20vh 4vw;
   font-family: "Ubuntu Condensed", sans-serif;
 } */
+<<<<<<< HEAD
 
 main * {
   transition: 0.7s;
@@ -219,6 +220,28 @@ main h1{
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
+=======
+
+main * {
+  transition: 0.7s;
+}
+main {
+  display: none;
+  opacity: 0;
+  width: 0vw;
+  overflow: hidden;
+}
+
+main h1{
+  /* border: 2px solid blue; */
+  display: inline-block;
+  font-size: 7vh;
+  color: black;
+  -webkit-text-stroke: 1px white;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+>>>>>>> 304eb203cd69a778501b66d2e01b636d1e4d37a3
 main h1:hover{
   color: white;
   -webkit-text-stroke: 1px red;
@@ -322,6 +345,7 @@ main h1:hover{
 	border: 3px solid rgba(231, 25, 25, 0.9);
 }
 
+<<<<<<< HEAD
 @media (max-width: 992px) {
 	.footer__container {
 		flex-direction: column;
@@ -333,6 +357,20 @@ main h1:hover{
 	.column-footer__logo {
 		margin: 0px auto;
 	}
+=======
+.contacts-footer__2 {
+	display: flex;
+	align-items: center;
+}
+
+.contacts-footer__2 img {
+	display: block;
+	margin: 0px 10px 0px 0px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 3px solid rgba(153, 61, 61, 0.9);
+>>>>>>> 304eb203cd69a778501b66d2e01b636d1e4d37a3
 }
 
 
