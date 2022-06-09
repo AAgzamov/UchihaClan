@@ -199,7 +199,6 @@ nav img:hover{
   padding: 20vh 4vw;
   font-family: "Ubuntu Condensed", sans-serif;
 } */
-<<<<<<< HEAD
 
 main * {
   transition: 0.7s;
@@ -220,28 +219,6 @@ main h1{
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
-=======
-
-main * {
-  transition: 0.7s;
-}
-main {
-  display: none;
-  opacity: 0;
-  width: 0vw;
-  overflow: hidden;
-}
-
-main h1{
-  /* border: 2px solid blue; */
-  display: inline-block;
-  font-size: 7vh;
-  color: black;
-  -webkit-text-stroke: 1px white;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-}
-
->>>>>>> 304eb203cd69a778501b66d2e01b636d1e4d37a3
 main h1:hover{
   color: white;
   -webkit-text-stroke: 1px red;
