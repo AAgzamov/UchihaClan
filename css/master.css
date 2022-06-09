@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap"); /* Acme, sans-serif */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap'") /* "Ubuntu Condensed", sans-serif */;
 
+* {
+    scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "YouMurderer";
   src: url("../fonts/Youmurdererbb-pwoK.otf");
@@ -65,11 +69,22 @@
 @keyframes mainAppear {
   from {
     opacity: 0;
+    width: 0vw;
+  }
+  to {
+    opacity: 1;
+    width: 100vw;
+  }
+}
+
+@keyframes footerAppear {
+  from {
+    opacity: 0;
     height: 0vh;
   }
   to {
     opacity: 1;
-    height: 80vh;
+    height: 40vh;
   }
 }
 
@@ -92,7 +107,7 @@ body{
 header{
   /* display: flex; */
   display: none;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   align-items: center;
   justify-content: center;
   font-family: Acme, sans-serif;
@@ -101,20 +116,20 @@ header{
 }
 
 header *{
-  border: 2px solid red;
-  width: 12vw;
-  margin: 0px 3vw;
+  /* border: 2px solid red; */
+  /* width: 14vw; */
   text-align: center;
 }
 
-header div{
+header div.tab{
   width: auto;
+  margin: 0px 5vw;
   transition: .9s;
   -webkit-text-stroke: 1px white;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   color: black;
 }
-header div:hover{
+header div.tab:hover{
   transition: .9s;
   color: white;
   transform: scale(1.3, 1);
@@ -122,6 +137,15 @@ header div:hover{
   text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
 }
 
+header div a{
+  overflow-wrap: break-word;
+  text-decoration: none;
+  color: inherit;
+}
+
+header div a:hover{
+  cursor: inherit;
+}
 div.clan__name{
   display: none;
   height: 0vh;
@@ -130,7 +154,7 @@ div.clan__name{
   /* font-family: Acme, sans-serif; */
   font-family: "Black Asylum", sans-serif;
   font-size: 10vh;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   justify-content: center;
   align-items: center;
   transition: .9s;
@@ -144,11 +168,11 @@ nav{
   /* display: flex; */
   display: none;
   /* border: 2px solid green; */
-  height: 100vh;
+  height: 85vh;
   /* overflow-x: scroll; */
   margin-left: 100%;
-  margin-top: 18vh;
-  margin-bottom: 10vh;
+  margin-top: 26vh;
+  margin-bottom: 4vh;
 }
 
 nav img{
@@ -156,10 +180,10 @@ nav img{
   filter: grayscale();
   /* transform: skewX(20deg) !important; */
   /* margin: 0px 3vw; */
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   border-radius: 20px;
-  width: 40vw !important;
-  height: 100vh !important;
+  width: 30vw !important;
+  height: 70vh !important;
 }
 
 nav img:hover{
@@ -167,17 +191,39 @@ nav img:hover{
   cursor: url("../pictures/cursorHover.png"), auto;
 }
 
-/*main{
-  /* display: flex; */
+/* main{
+  display: flex;
   display: none;
   border: 2px solid yellow;
   height: 0vh;
   padding: 20vh 4vw;
-  /*font-family: "Ubuntu Condensed", sans-serif;*/
-/*}*/
+  font-family: "Ubuntu Condensed", sans-serif;
+} */
 
-.main {
+main * {
+  transition: 0.7s;
+}
+main {
+  display: none;
+  opacity: 0;
+  width: 0vw;
+  overflow: hidden;
+}
 
+main h1{
+  /* border: 2px solid blue; */
+  display: inline-block;
+  font-size: 7vh;
+  color: black;
+  -webkit-text-stroke: 1px white;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+main h1:hover{
+  color: white;
+  -webkit-text-stroke: 1px red;
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+  transform: translateX(20px);
 }
 
 .main__container {
@@ -190,24 +236,30 @@ nav img:hover{
 }
 
 .text-main__general {
-	font-size: 18px;
+  font-family: "Ubuntu Condensed", sans-serif;
+	font-size: 4vh;
 }
 
-.text-main__abilities {
-
+.text-main__title p{
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 4vh;
 }
 
-.text-main__abilities p:last-child {
+.text-main__title p:last-child {
 	display: flex;
 	align-items: center;
 }
 
-.text-main__abilities p:last-child img {
+.text-main__title p:last-child img {
 	order: 1;
 }
 
 .footer {
-	padding: 10px;
+  display: none;
+  padding: 10px;
+  opacity: 0;
+  height: 0vh;
+  overflow: hidden;
 }
 
 .footer__content {
@@ -219,11 +271,21 @@ nav img:hover{
 
 .footer__container {
 	display: flex;
-	flex-direction: column;
+	justify-content: space-between;
+	font-size: 17px;
+	padding: 0px 20px 0px 0px;
 }
 
 .footer__column {
 	font-family: Acme, sans-serif;
+}
+.column-footer {
+}
+
+.column-footer__logo img {
+	display: block;
+	width: 100px;
+	height: 100px;
 }
 
 .footer__logo {
@@ -245,34 +307,13 @@ nav img:hover{
 	font-family: "Black Asylum", sans-serif;
 }
 
-.footer__contacts {
-	display: flex;
-	justify-content: space-between;
-	font-size: 17px;
-	padding: 0px 20px 0px 0px;
-}
-
-@media (max-width: 768px) {
-	.footer__contacts {
-		flex-direction: column;
-		align-items: center;
-	}
-	.contacts-footer__1 {
-		margin: 0px 0px 20px 0px;
-	}
-}
-
-.contacts-footer {
-
-}
-
-.contacts-footer__1 {
+.footer__column {
 	margin: 0px 0px 10px 0px;
 	display: flex;
 	align-items: center;
 }
 
-.contacts-footer__1 img {
+.column-footer__photo img {
 	display: block;
 	margin: 0px 10px 0px 0px;
 	width: 100px;
@@ -281,23 +322,17 @@ nav img:hover{
 	border: 3px solid rgba(231, 25, 25, 0.9);
 }
 
-.contacts-footer__2 {
-	display: flex;
-	align-items: center;
-}
-
-.contacts-footer__2 img {
-	display: block;
-	margin: 0px 10px 0px 0px;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	border: 3px solid rgba(153, 61, 61, 0.9);
-}
-
-.links img{
-  width: 20vw;
-  height: 20vh;
+@media (max-width: 992px) {
+	.footer__container {
+		flex-direction: column;
+		justify-content: start;
+	}
+	.footer__column:nth-child(2) {
+		order: -1;
+	}
+	.column-footer__logo {
+		margin: 0px auto;
+	}
 }
 
 
@@ -392,6 +427,23 @@ nav img:hover{
   border-radius: 10vh;
 }
 
+div.swiper-slide{
+  width: 30vw;
+
+}
+
+div.swiper-slide div{
+  width: 30vw;
+  text-align: center;
+  font-family: Bloody, sans-serif;
+  font-size: 7vh;
+}
+div.swiper-slide:hover > div{
+  color: rgba(212, 14, 0, 1); /* red */
+  -webkit-text-stroke: 1px white;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  transition: 1s;
+}
 .swiper-pagination-bullet{
   background-color: rgba(255, 255, 255, 0.9) !important;
   border: 3px solid red;
@@ -399,4 +451,18 @@ nav img:hover{
 
 .swiper-pagination-bullet-active{
   background-color: red !important;
+}
+
+div.life__lesson{
+  text-align: center;
+  font-size:  5vh;
+  font-family: Acme, sans-serif;
+  height: 8vh;
+  margin-bottom: 60vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  box-sizing: border-box;
+  opacity: 0;
+  width: 0;
+  display: none;
 }
