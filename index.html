@@ -19,7 +19,7 @@
 		<!-- <div class="">
 		  Tab 2
 		</div> -->
-    <div class="" style="margin-left: 8vw; margin-right: 6vw;">
+    <div class="middle">
       <img src="./pictures/mainPage/icon.png" alt="UchihaClanLogo">
       <div class="clan__name">
         Uchiha Clan
@@ -106,10 +106,10 @@
           <h1><span>Who is Uchiha?</span></h1>
           <p>
             Uchiha is a fictional clan in "Naruto" anime series.
-            Members (Uchihas) of the Uchiha clan are considered to feel the deep empathy and to love more than other clans.
-            However, Uchihas believed that they natural ability to love is a weakness. Thus, they partly hid any signs of affection, and that in turn made them look as the most evil clan.
-            In fact, Uchihas experience love deep inside their hearts. Nevertheless, when an Uchiha experiences considerable emotional distress or loses intimate person (like parent, siblings, friends)
-            Uchiha's strong sense of love will transform into a sense of hatred towards offenders and desire to revenge.
+            <br>Members (Uchihas) of the Uchiha clan are considered to feel the deep empathy and to love more than other clans.
+            <br>However, Uchihas believed that they natural ability to love is a weakness. Thus, they partly hid any signs of affection, and that in turn made them look as the most evil clan.
+            <br>In fact, Uchihas experience love deep inside their hearts. Nevertheless, when an Uchiha experiences considerable emotional distress or loses intimate person (like parent, siblings, friends)
+            <br>Uchiha's strong sense of love will transform into a sense of hatred towards offenders and desire to revenge.
             <br>
             That is the nature of the Uchiha ...
           </p>
@@ -117,10 +117,10 @@
 				<div class="text-main__title">
 					<h1><span>General Abilities<span></h1>
             <p>
-              Uchihas are innately physically strong and have potent chakra (energy to use nature styles) since they are descendants of Otsutsuki clan.
-              Uchihas are renowned for their "Sharingan" that empowers their skills; the "Sharingan" type is the most powerful visual kekkei genkai.
-              However, Uchiha is not the strongest clan. Senju clan is the strongest one and they are the only ones who were able to confront Uchihas.
-              Uchiha clan and Senju clan were always in rivalry.
+              <br>Uchihas are innately physically strong and have potent chakra (energy to use nature styles) since they are descendants of Otsutsuki clan.
+              <br>Uchihas are renowned for their "Sharingan" that empowers their skills; the "Sharingan" type is the most powerful visual kekkei genkai.
+              <br>However, Uchiha is not the strongest clan. <br>Senju clan is the strongest one and they are the only ones who were able to confront Uchihas.
+              <br>Uchiha clan and Senju clan were always in rivalry.
             </p>
 					<!-- <p>
 						The Uchiha were known for having an innate aptitude for all combat-oriented skills and an advanced growth rate. They also have an especially potent chakra quality as well as a natural affinity for the fire nature transformation; Uchiha are not truly considered adults until they can successfully perform the Fire Release: Great Fireball Technique. Exceptional Uchiha have such skill with Fire Release that either multiple Water Release users working in tandem or a similarly skilled Water Release user are required to extinguish their flames. Uchiha also frequently use ninja tools in combat, being best known for their use of shuriken. <br>
@@ -138,13 +138,13 @@
             Regarding the shape of the eye pattern, it is true that the eyes are the windows to the soul. That means that the more complicated eye pattern an Uchiha possess, the more he suffered ...
             <br><br>
             There is more ominous thing – Mangekyo Sharingan. Mangekyo Sharingan provides power to awaken secret techniques (and they are even more powerful) of the Uchiha Clan.
-            Some of those techniques are Amaterasu (black flame that does not go out until the target it burnt completely), Susanoo (impenetrable in defense and destructive in attack), Kamui (ability to teleport between dimensions) ...
-            To awaken Mangekyo Sharingan an Uchiha has to kill an inmate person such as friend, sibling ...
-            However, there is huge drawback of using Mangekyo Sharingan. Every time an Uchiha uses Mangekyo Sharingan, his/her eyesight becomes worse ... and the Uchiha will be doomed to the fate of becoming blind (no more power of the sharingan) ...
-            Well ... a user of Mangekyo Sharingan can avert such fate by transplating sibling's eyes ...
-            That makes an Uchiha possess Eternal Mangekyo Sharingan that provides limitless power ...
+            <br>Some of those techniques are Amaterasu (black flame that does not go out until the target it burnt completely), Susanoo (impenetrable in defense and destructive in attack), Kamui (ability to teleport between dimensions) ...
+            <br>To awaken Mangekyo Sharingan an Uchiha has to kill an inmate person such as friend, sibling ...
+            <br>However, there is huge drawback of using Mangekyo Sharingan. <br>Every time an Uchiha uses Mangekyo Sharingan, his/her eyesight becomes worse ... and the Uchiha will be doomed to the fate of becoming blind (no more power of the sharingan) ...
+            <br>Well ... a user of Mangekyo Sharingan can avert such fate by transplating sibling's eyes ...
+            <br>That makes an Uchiha posses Eternal Mangekyo Sharingan that provides limitless power ...
           </p>
-          <img src="./pictures/mainPage/sharingan.png" alt="">
+          <img class="sharingan" src="./pictures/mainPage/sharingan.png" alt="">
         </div>
         <div class="text-main__title">
           <h1><span>Renowned Uchihas</span></h1>
@@ -242,6 +242,35 @@
 		}
 	  })
     bodyDiv.addEventListener("mousemove", () => {
+      if (swiper.realIndex === 0){
+        lifeLessonDiv.innerText = "The concept of hope is nothing more than giving up. A word that holds no true meaning"
+      }
+      else if (swiper.realIndex === 1){
+        lifeLessonDiv.innerText = "People cannot show each other their true feelings. Fear, suspicion, and resentment never subside"
+      }
+      else if (swiper.realIndex === 2){
+        lifeLessonDiv.innerText = "Man seeks peace, yet at the same time yearning for war... Those are the two realms belonging solely to man"
+      }
+      else if (swiper.realIndex === 3){
+        lifeLessonDiv.innerText = "It’s foolish to fear what we have yet to see and know"
+      }
+      else if (swiper.realIndex === 4){
+        lifeLessonDiv.innerText = "When a man learns to love, he must bear the risk of hatred"
+      }
+      else if (swiper.realIndex === 5){
+        lifeLessonDiv.innerText = "I don't even know if there is such a thing as justice in the world. We fight believing in our own justice. But if the enemy is doing the same thing, who's right?"
+      }
+      else if (swiper.realIndex === 6){
+        lifeLessonDiv.innerText = "Knowledge and awareness are vague, and perhaps better called illusions. Everyone lives within their own subjective interpretation"
+      }
+      else if (swiper.realIndex === 7){
+        lifeLessonDiv.innerText = "The people that are the hardest to love are usually the ones who need it the most"
+      }
+      else if (swiper.realIndex === 8){
+        lifeLessonDiv.innerText = "Don’t be afraid of losing other people, be afraid of losing yourself"
+      }
+    })
+    bodyDiv.addEventListener("touchmove", () => {
       if (swiper.realIndex === 0){
         lifeLessonDiv.innerText = "The concept of hope is nothing more than giving up. A word that holds no true meaning"
       }

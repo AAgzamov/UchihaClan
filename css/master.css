@@ -146,6 +146,11 @@ header div a{
 header div a:hover{
   cursor: inherit;
 }
+
+div.middle {
+  margin-left: 8vw; margin-right: 6vw;
+}
+
 div.clan__name{
   display: none;
   height: 0vh;
@@ -162,6 +167,7 @@ div.clan__name{
   overflow-y: hidden;
 
 }
+
 
 
 nav{
@@ -466,4 +472,108 @@ div.life__lesson{
   opacity: 0;
   width: 0;
   display: none;
+}
+
+@media (orientation: portrait) {
+  @keyframes headerAppear {
+    from {
+      opacity: 0;
+      font-size: 0vw;
+    }
+    to {
+      opacity: 1;
+      font-size: 6vw;
+    }
+  }
+  @keyframes footerAppear {
+    from {
+      opacity: 0;
+      height: 0vh;
+    }
+    to {
+      opacity: 1;
+      height: auto;
+    }
+  }
+  header:first-child {
+    padding: 5vw;
+  }
+  header div img {
+    width: 20vw;
+  }
+  div.clan__name {
+    font-size: 10vw;
+  }
+  div.middle {
+    margin-left: 9vw;
+    margin-right: 0vw;
+    margin-top: 5vh;
+  }
+
+  nav {
+    height: 60vh;
+    margin-top: 20vh;
+  }
+
+  nav img {
+    height: 50vh !important;
+    width: 60vw !important;
+  }
+  div.swiper-slide {
+    width: 60vw;
+  }
+  div.swiper-slide div{
+    width: 60vw;
+    /* text-align: center;
+    font-family: Bloody, sans-serif; */
+    font-size: 7vw;
+  }
+  div.life__lesson{
+    /* text-align: center; */
+    font-size:  5vw;
+    /* font-family: Acme, sans-serif; */
+    height: 8vh;
+    margin-bottom: 15vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    /* box-sizing: border-box;
+    opacity: 0;
+    width: 0;
+    display: none; */
+  }
+
+  main {
+    height: auto;
+    margin-bottom: 20vh;
+  }
+  main h1 {
+    font-size: 10vw;
+    padding-left: 3vw;
+  }
+  .text-main__title p{
+    /* font-family: "Ubuntu Condensed", sans-serif; */
+    font-size: 6vw;
+    padding: 0vw 5vw;
+  }
+  img.sharingan {
+    width: 40vw;
+    margin-left: 5vw;
+  }
+
+  .quote {
+    justify-content: center;
+  }
+  .quote__text {
+    font-size: 8vw;
+    padding: 0vw 3vw;
+    margin-bottom: 2vh;
+  }
+  .quote__author {
+    font-size: 7vw;
+    margin-bottom: 0vh;
+  }
+  .play__button {
+    font-size: 10vw;
+    margin-top: -13vh;
+  }
 }
