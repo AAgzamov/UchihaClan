@@ -208,6 +208,7 @@ main {
   opacity: 0;
   width: 0vw;
   overflow: hidden;
+  margin-bottom: 60vh;
 }
 
 main h1{
@@ -251,7 +252,7 @@ main h1:hover{
 }
 
 .text-main__title p:last-child img {
-	order: 1;
+  order: 1;
 }
 
 .footer {
