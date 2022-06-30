@@ -16,9 +16,13 @@ backgroundMusic.setAttribute("loop", true)
 
 playButtonDiv.addEventListener("click", () => {
   playButtonDiv.style.visibility = "hidden"
-  if(backgroundMusic.readyState === 3 || backgroundMusic.readyState === 4){
-    backgroundMusic.play()
-  }
+  const playAudio = setInterval( () => {
+    if(backgroundMusic.readyState === 3 || backgroundMusic.readyState === 4){
+      backgroundMusic.play()
+      clearInterval(playAudio)
+    }
+
+  }, 100)
 })
 
 setTimeout( () => {
@@ -41,7 +45,7 @@ setTimeout( () => {
   lifeLessonDiv.style.animationName = "mainAppear"
   lifeLessonDiv.style.animationDuration = "10s"
   lifeLessonDiv.style.animationFillMode = "forwards"
-  
+
   mainDiv.style.display = "flex"
   mainDiv.style.animationName = "mainAppear"
   mainDiv.style.animationDuration = "10s"
